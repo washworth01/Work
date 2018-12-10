@@ -34,10 +34,10 @@ public abstract class Vehicle
 	//Methods
 	public String setColour(String colour)
 	{
-		this.colour = colour;
+		return this.colour = colour;
 	}
 	public int setTopSpeed(int topSpeed)
 	{
-		
+		return this.topSpeed = topSpeed;
 	}
 }

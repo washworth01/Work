@@ -19,6 +19,17 @@ public class BlackJack
 	
 	public static int closestTo21(int num1, int num2)
 	{
+		
+		if (num1 > 21)
+		{
+			num1 = 0;
+		}
+		
+		if (num2 > 21)
+		{
+			num2 = 0;
+		}
+		
 		if(num1 > num2 && num1 <= 21)
 		{
 			return num1;
@@ -33,4 +44,6 @@ public class BlackJack
 		}
 	}
 }
+
+
 

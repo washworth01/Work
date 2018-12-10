@@ -24,4 +24,9 @@ public class Car extends Vehicle
 	
 	
 	//Methods
+	
+	public boolean getIsConvertable()
+	{
+		return isConvertable;
+	}
 }
