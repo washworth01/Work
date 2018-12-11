@@ -12,7 +12,7 @@ public class Car extends Vehicle
 			,int topSpeed, boolean isConvertable)
 	{
 		super(regNumber, manufacturer, make, colour, topSpeed);
-		this.isConvertable = isConvertable;
+		this.setConvertable(isConvertable);
 	}
 	
 	public Car(String regNumber, String manufacturer, String make, boolean isConvertable)
@@ -20,13 +20,41 @@ public class Car extends Vehicle
 		this(regNumber, manufacturer, make,"Black",0, false);
 	}
 	
-	
-	
-	
 	//Methods
+	@Override
+	public String toString()
+	{
+		return "\nRegistration Number: " + getRegNumber() + "\nManufacturer: " + getManufacturer() + "\nMake: " + getMake() 
+		+ "\nColour: " + getColour() + "\nTop Speed: " + getTopSpeed() + "mph" + "\nConvertable: " + isConvertable() + "\n";
+	}
 	
-	public boolean getIsConvertable()
+	@Override
+	public int calculateCost() 
+	{
+		int cost = 3000;
+		
+		if (getTopSpeed() > 100)
+		{
+			cost = cost + 500;
+		}
+		
+		if(isConvertable())
+		{
+			cost = cost + 400;
+		}
+		
+		return cost;
+	}
+	
+	public boolean isConvertable() 
 	{
 		return isConvertable;
 	}
+
+	public void setConvertable(boolean isConvertable) 
+	{
+		this.isConvertable = isConvertable;
+	}
+	
+	//Methods
 }
