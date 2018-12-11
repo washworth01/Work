@@ -1,35 +1,29 @@
 package people;
 
-import people.People;
+import people.ListOfPeople;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Main
-{
+public class Main 
+{	
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-				
-		//{new People("William Ashworth","Student"),new People("Richard Nixon", "POTUS"), new People("Harold Godwinson", "King")};
-		People.person.add(new People("William Ashworth", "Student", 21));
-		People.person.add(new People("Richard Nixon", "POTUS", 81));
-		People.person.add(new People("Harold Godwinson", "King", 44));
+		ListOfPeople people = new ListOfPeople();
 		
-		People.person.stream().
-		forEach(System.out::println);
+		people.add(new Person("William Ashworth", "Student", 21));
+		people.add(new Person("Richard Nixon", "POTUS", 81));
+		people.add(new Person("Harold Godwinson", "King", 44));
 		
-		System.out.println(People.person.get(0).getName());
+		System.out.println(people.getPeople());
 		
 		String searchName = sc.next();
-		sc.close();
 		
-		List<People> filtered = People.person.stream().
-			filter(name -> People.checkName(searchName, People.person.get(0).getName())).
-			collect(Collectors.toList());
-		
-		filtered.stream().forEach(System.out::println);
+		System.out.println(people.serachByName(searchName));
 	}
 }
+
