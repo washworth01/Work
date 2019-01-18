@@ -1,0 +1,89 @@
+<html>
+    <html>
+        <head>
+            <title>filmsTable</title>
+		<style>
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-colour: #303030;
+		}
+		
+		li {
+			float: left;
+			border-right:1px solid #bbb;
+		}
+		
+		li:last-child {
+		border-right: none;
+		}
+
+		li a {
+			display: block;
+			colour: white;
+			text-align: center;
+			padding: 8px;
+			text-decoration: none;
+		}
+		
+		li a:hover {
+			background-color:#6699ff; 
+		}
+		
+		</style>
+		</head>
+		<body>
+		<div class="horizontal-menu">
+			<ul>
+			<li><a id="all" href=# onclick="getByCategory(this.id);return false;">All</a></li>
+			<li><a id="action" href=# onclick="getByCategory(this.id);return false;">Action</a></li>
+			<li><a id="animation" href=# onclick="getByCategory(this.id);return false;">Animation</a></li>
+			<li><a id="children" href=# onclick="getByCategory(this.id);return false;">Children</a></li>
+			<li><a id="classics" href=# onclick="getByCategory(this.id);return false;">Classics</a></li>
+			<li><a id="comedy" href=# onclick="getByCategory(this.id);return false;">Comedy</a></li>
+			<li><a id="documentary" href=# onclick="getByCategory(this.id);return false;">Documentary</a></li>
+			<li><a id="drama" href=# onclick="getByCategory(this.id);return false;">Drama</a></li>
+			<li><a id="family" href=# onclick="getByCategory(this.id);return false;">Family</a></li>
+			<li><a id="foreign" href=# onclick="getByCategory(this.id);return false;">Foreign</a></li>
+			<li><a id="games" href=# onclick="getByCategory(this.id);return false;">Games</a></li>
+			<li><a id="horror" href=# onclick="getByCategory(this.id);return false;">Horror</a></li>
+			<li><a id="music" href=# onclick="getByCategory(this.id);return false;">Music</a></li>
+			<li><a id="new" href=# onclick="getByCategory(this.id);return false;">New</a></li>
+			<li><a id="sci-fi" href=# onclick="getByCategory(this.id);return false;">Sci-Fi</a></li>
+			<li><a id="sports" href=# onclick="getByCategory(this.id);return false;">Sports</a></li>
+			<li><a id="travel" href=# onclick="getByCategory(this.id);return false;">Travel</a></li>
+			</ul>
+		</div>
+		<div  class="vertical-menu">
+			<ul>
+				Age Rating:
+				<li><input type="checkbox" id="r" value="R"><li>
+				<li><input type="checkbox" id="pg" value="PG"><li>
+				
+			</ul>
+		</div>
+            <<!-- input type="button" id="all" value="All" onclick="getByCategory(this.id);"
+            <input type="button" id="action" value="Action" onclick="getByCategory(this.id);">
+            <input type="button" id="animation" value="Animation" onclick="getByCategory(this.id);">
+            <input type="button" id="children" value="Children" onclick="getByCategory(this.id);">
+            <input type="button" id="classics" value="Classics" onclick="getByCategory(this.id);">
+            <input type="button" id="comedy" value="Comedy" onclick="getByCategory(this.id);">
+            <input type="button" id="documentary" value="Documentary" onclick="getByCategory(this.id);">
+            <input type="button" id="drama" value="Drama" onclick="getByCategory(this.id);">
+            <input type="button" id="family" value="Family" onclick="getByCategory(this.id);">
+            <input type="button" id="foreign" value="Foreign" onclick="getByCategory(this.id);">
+            <input type="button" id="games" value="Games" onclick="getByCategory(this.id);">
+            <input type="button" id="horror" value="Horror" onclick="getByCategory(this.id);">
+            <input type="button" id="music" value="Music" onclick="getByCategory(this.id);">
+            <input type="button" id="new" value="New" onclick="getByCategory(this.id);">
+            <input type="button" id="sci-fi" value="Sci-Fi" onclick="getByCategory(this.id);">
+            <input type="button" id="sports" value="Sports" onclick="getByCategory(this.id);">
+            <input type="button" id="travel" value="Travel" onclick="getByCategory(this.id);"> -->
+        <div class="container">
+			<table id = "filmList"></table>
+		</div>
+            <script src=filmsTable.js></script>
+        </body>
+    </html>
